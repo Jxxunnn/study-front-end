@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Gugudan from "./Gugudan";
+import NumberBaseball from "./NumberBaseball";
 import WordRelay from "./WordRelay";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Gugudan />
       <WordRelay />
+      <NumberBaseball />
     </div>
   );
 }
