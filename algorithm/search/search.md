@@ -57,3 +57,21 @@ const getPermutations = function (arr, selectNumber) {
   return results; // 결과 담긴 results return
 };
 ```
+
+# 중복순열
+
+```js
+function permutation(arr, selectNum) {
+  const result = [];
+  if (selectNum === 1) return arr.map((v) => [v]);
+
+  arr.forEach((v, idx, arr) => {
+    const fixed = v;
+    const restArr = arr;
+    const permutationArr = permutation(restArr, selectNum - 1);
+    const combineFix = permutationArr.map((v) => [fixed, ...v]);
+    result.push(...combineFix);
+  });
+  return result;
+}
+```
