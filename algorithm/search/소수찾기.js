@@ -1,5 +1,6 @@
 /* 프로그래머스 2단계 소수 찾기 */
 function solution(numbers) {
+  //소수 판별 함수
   function isPrimeNumber(n) {
     if (n == 1) return;
     for (let i = 2; i < n; i++) {
@@ -7,6 +8,7 @@ function solution(numbers) {
     }
     primes.push(n);
   }
+  //메인
   const nums = numbers.split("").map((it) => +it);
   const primes = [];
   for (let i = 0; i < nums.length; i++) {
@@ -19,7 +21,7 @@ function solution(numbers) {
   }
   return new Set([...primes]).size;
 }
-
+//조합 구하는 함수
 function getPermutations(arr, selectNumber) {
   const results = [];
   if (selectNumber === 1) return arr.map((el) => [el]);
