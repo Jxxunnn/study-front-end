@@ -1,3 +1,5 @@
+# 완전 탐색 aka. Brute Force
+
 가능한 모든 상황을 조사해서 문제 해결하기
 
 # 소수 판별
@@ -74,4 +76,21 @@ function permutation(arr, selectNum) {
   });
   return result;
 }
+```
+
+# 중복조합
+
+```js
+const combination = (arr, selectNum) => {
+  const result = [];
+  if (selectNum === 1) return arr.map((v) => [v]);
+  arr.forEach((item, idx, origin) => {
+    const remain = origin.slice(idx);
+    const reCall = combination(remain, selectNum - 1);
+    const attach = reCall.map((value) => [item, ...value]);
+
+    result.push(...attach);
+  });
+  return result;
+};
 ```
