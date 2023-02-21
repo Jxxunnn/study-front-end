@@ -41,8 +41,6 @@ function Users() {
     return <span>Error: {message}</span>;
   }
 
-  console.log(data);
-
   return (
     <ul>
       {data?.map((d) => (
