@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
-//import { serialize } from "next-mdx-remote/serialize";
+import { serialize } from "next-mdx-remote/serialize";
 
 // eslint-disable-next-line no-undef
 const postsDirectory = path.join(process.cwd(), "posts");
